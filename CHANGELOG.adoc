@@ -1,0 +1,7 @@
+= Změny formátu
+// Jen změny formátu (schéma, výběr, vzorky). Změny textu dokumentace -> docs/<lang>/changelog.adoc
+
+== 2.0
+
+* První verze v DATEX II 3.4 (2024).
+* Vzorek Vražné (L) z produkčních dat 14. 10. 2026, odkazy na tabulku `CzechParkingTableRSD` verze 2606.

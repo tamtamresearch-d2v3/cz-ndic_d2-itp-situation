@@ -1,0 +1,26 @@
+# Metadata formátu – součást vydání specifikace (tag v2.0).
+id: x-format:cz-ndic_d2-itp-situation-v2.0
+version: '2.0'
+name:
+  cs: DATEX II Parking Status Publication – Stav dálničních odpočívek
+  en: DATEX II Parking Status Publication – Status of motorway rest areas
+description:
+  cs: 'Aktuální stav dálničních odpočívek: otevřenost, porucha detekce a obsazenost odpočívky, logických a fyzických skupin parkovacích míst a jednotlivých stání s odkazy do tabulky odpočívek.'
+  en: 'Current status of motorway rest areas: opening status, detection fault and occupancy of the rest area, logical and physical groups of parking spaces and individual spaces, referring to the rest area table.'
+publisher:
+  cs: Národní dopravní informační centrum
+  en: National Traffic Information Centre
+model:
+  name: DATEX II
+  version: '3.4'
+  publication: ParkingStatusPublication
+  extensions: []
+schema:
+  dir: schema
+  entry: DATEXII_3_D2Payload.xsd
+selection: sel/cz-ndic_d2-itp-situation.sel
+samples: samples
+maintainer:
+  name: Petr Bureš
+  company: TamTam Research s.r.o.
+  url: https://www.tamtamresearch.com

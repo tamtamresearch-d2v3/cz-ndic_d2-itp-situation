@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:prk="http://datex2.eu/schema/3/parking" version="1" targetNamespace="http://datex2.eu/schema/3/parking" xmlns:com="http://datex2.eu/schema/3/common" xmlns:fac="http://datex2.eu/schema/3/facilities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/facilities" schemaLocation="DATEXII_3_Facilities.xsd" />
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_ParkingFaultEnum">
+    <xs:simpleContent>
+      <xs:extension base="prk:ParkingFaultEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingOccupancyTrendEnum">
+    <xs:simpleContent>
+      <xs:extension base="prk:ParkingOccupancyTrendEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingPlaceStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="prk:ParkingPlaceStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="_ParkingTableVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="prk:ParkingTable" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AccessStatus">
+    <xs:complexContent>
+      <xs:extension base="prk:ParkingStatusInformation">
+        <xs:sequence>
+          <xs:element name="entranceFull" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_accessStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="Occupancy">
+    <xs:sequence>
+      <xs:element name="numberOfSpacesOverride" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfVacantSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfOccupiedSpaces" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="numberOfVehicles" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="occupancy" type="com:Percentage" minOccurs="0" maxOccurs="1" />
+      <xs:element name="occupancyTrend" type="prk:_ParkingOccupancyTrendEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="parkingNotAllowed" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="overrideThresholdConfiguration" type="prk:ThresholdConfiguration" minOccurs="0" />
+      <xs:element name="_occupancyExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ParkingFaultEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="communicationsFailure" />
+      <xs:enumeration value="barrierMalfunction" />
+      <xs:enumeration value="entranceExitObstructed" />
+      <xs:enumeration value="erroneousOccupancyInformation" />
+      <xs:enumeration value="erroneousOccupancyDisplayed" />
+      <xs:enumeration value="paymentMachinesInoperative" />
+      <xs:enumeration value="reservationServiceOutOfOrder" />
+      <xs:enumeration value="noParkingInformationAvailable" />
+      <xs:enumeration value="unspecified" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingOccupancyTrendEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="decreasing" />
+      <xs:enumeration value="increasing" />
+      <xs:enumeration value="stable" />
+      <xs:enumeration value="increasingQuickly" />
+      <xs:enumeration value="increasingSlowly" />
+      <xs:enumeration value="decreasingQuickly" />
+      <xs:enumeration value="decreasingSlowly" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ParkingPlaceStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="full" />
+      <xs:enumeration value="fullAtEntrance" />
+      <xs:enumeration value="spacesAvailable" />
+      <xs:enumeration value="almostFull" />
+      <xs:enumeration value="overcrowding" />
+      <xs:enumeration value="overcrowdingLevel1" />
+      <xs:enumeration value="overcrowdingLevel2" />
+      <xs:enumeration value="noOvercrowding" />
+      <xs:enumeration value="unknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ParkingStatusInformation">
+    <xs:complexContent>
+      <xs:extension base="fac:FacilityStatus">
+        <xs:sequence>
+          <xs:element name="parkingFault" type="prk:_ParkingFaultEnum" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="occupancy" type="prk:Occupancy" minOccurs="0" />
+          <xs:element name="_parkingStatusInformationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="ParkingStatusPublication">
+    <xs:complexContent>
+      <xs:extension base="com:PayloadPublication">
+        <xs:sequence>
+          <xs:element name="parkingTableReference" type="prk:_ParkingTableVersionedReference" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="headerInformation" type="com:HeaderInformation" minOccurs="0" />
+          <xs:element name="parkingStatusInformation" type="prk:ParkingStatusInformation" maxOccurs="unbounded" />
+          <xs:element name="_parkingStatusPublicationExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="PlaceStatus">
+    <xs:complexContent>
+      <xs:extension base="prk:ParkingStatusInformation">
+        <xs:sequence>
+          <xs:element name="status" type="prk:_ParkingPlaceStatusEnum" minOccurs="0" maxOccurs="unbounded" />
+          <xs:element name="_placeStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="SpaceStatus">
+    <xs:complexContent>
+      <xs:extension base="prk:ParkingStatusInformation">
+        <xs:sequence>
+          <xs:element name="occupied" type="com:Boolean" minOccurs="1" maxOccurs="1" />
+          <xs:element name="measurementOrCalculationTime" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+          <xs:element name="_spaceStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="StatusConfiguration">
+    <xs:sequence>
+      <xs:element name="parkingStatus" type="prk:_ParkingPlaceStatusEnum" minOccurs="1" maxOccurs="1" />
+      <xs:element name="thresholds" type="prk:Thresholds" />
+      <xs:element name="_statusConfigurationExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ThresholdConfiguration">
+    <xs:sequence>
+      <xs:element name="lastMaximumOccupancy" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="statusConfiguration" type="prk:StatusConfiguration" maxOccurs="unbounded" />
+      <xs:element name="_thresholdConfigurationExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Thresholds" abstract="true">
+    <xs:sequence>
+      <xs:element name="lowerThreshold" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="upperThreshold" type="com:NonNegativeInteger" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_thresholdsExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="VehiclesOnSiteThresholds">
+    <xs:complexContent>
+      <xs:extension base="prk:Thresholds">
+        <xs:sequence>
+          <xs:element name="_vehiclesOnSiteThresholdsExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<payload xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q1="http://datex2.eu/schema/3/parking" xmlns="http://datex2.eu/schema/3/d2Payload" xsi:type="q1:ParkingStatusPublication" lang="cs" modelBaseVersion="3" profileName="cz-ndic_d2-itp-situation" profileVersion="2.0">
+  <feedDescription xmlns="http://datex2.eu/schema/3/common">
+    <values>
+      <value lang="cs">x-source:cz-ndic_d2-itp-situation-v2.0</value>
+    </values>
+  </feedDescription>
+  <feedType xmlns="http://datex2.eu/schema/3/common">x-format:cz-ndic_d2-itp-situation-v2.0</feedType>
+  <publicationTime xmlns="http://datex2.eu/schema/3/common">2026-10-14T16:05:25.971538Z</publicationTime>
+  <publicationCreator xmlns="http://datex2.eu/schema/3/common">
+    <country>cz</country>
+    <nationalIdentifier>NDIC</nationalIdentifier>
+  </publicationCreator>
+  <q1:parkingTableReference id="CzechParkingTableRSD" version="2606" targetClass="prk:ParkingTable"/>
+  <q1:headerInformation>
+    <confidentiality xmlns="http://datex2.eu/schema/3/common">noRestriction</confidentiality>
+    <informationStatus xmlns="http://datex2.eu/schema/3/common">real</informationStatus>
+  </q1:headerInformation>
+  <q1:parkingStatusInformation xsi:type="q1:PlaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="restArea-10002" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:55:23.97Z</lastUpdated>
+    <openingStatus xmlns="http://datex2.eu/schema/3/facilities">open</openingStatus>
+    <q1:status>almostFull</q1:status>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation>
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingGroup-100088-0" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:38:21.458Z</lastUpdated>
+    <q1:occupancy>
+      <q1:numberOfSpacesOverride>15</q1:numberOfSpacesOverride>
+      <q1:numberOfVacantSpaces>4</q1:numberOfVacantSpaces>
+      <q1:numberOfVehicles>11</q1:numberOfVehicles>
+      <q1:occupancy>73</q1:occupancy>
+      <q1:occupancyTrend>unknown</q1:occupancyTrend>
+    </q1:occupancy>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation>
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingGroup-100089-0" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:55:23.926Z</lastUpdated>
+    <q1:occupancy>
+      <q1:numberOfSpacesOverride>18</q1:numberOfSpacesOverride>
+      <q1:numberOfVacantSpaces>1</q1:numberOfVacantSpaces>
+      <q1:numberOfVehicles>17</q1:numberOfVehicles>
+      <q1:occupancy>94</q1:occupancy>
+      <q1:occupancyTrend>unknown</q1:occupancyTrend>
+    </q1:occupancy>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation>
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingGroup-100090-0" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:10:35.358Z</lastUpdated>
+    <q1:occupancy>
+      <q1:numberOfSpacesOverride>4</q1:numberOfSpacesOverride>
+      <q1:numberOfVacantSpaces>1</q1:numberOfVacantSpaces>
+      <q1:numberOfVehicles>3</q1:numberOfVehicles>
+      <q1:occupancy>75</q1:occupancy>
+      <q1:occupancyTrend>unknown</q1:occupancyTrend>
+    </q1:occupancy>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation>
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="restArea-10002-statisticalGroup-lorry" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:55:23.958Z</lastUpdated>
+    <q1:occupancy>
+      <q1:numberOfSpacesOverride>37</q1:numberOfSpacesOverride>
+      <q1:numberOfVacantSpaces>6</q1:numberOfVacantSpaces>
+      <q1:numberOfVehicles>31</q1:numberOfVehicles>
+      <q1:occupancy>84</q1:occupancy>
+      <q1:occupancyTrend>stable</q1:occupancyTrend>
+    </q1:occupancy>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101121" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:00:46.015Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101116" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T12:54:35.85Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101113" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:18:50.994Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101123" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T10:42:49.436Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101118" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T13:30:17.534Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101117" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:30:02.778Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101122" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:58:50.7Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101120" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:56:14.281Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101109" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T09:49:31.711Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101112" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:33:02.989Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101110" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T13:28:10.815Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101114" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:47:06.822Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101115" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:38:21.467Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101119" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:58:20.919Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101111" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:16:14.898Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101094" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:39:06.459Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101039" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T12:20:26.908Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101097" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:01:46.353Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101040" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:07:55.898Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101107" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:39:56.158Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101108" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T13:37:45.69Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101093" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:03:54.214Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101095" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:24:27.544Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101102" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:53:29.486Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101042" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:43:41.183Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101100" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T13:06:18.101Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101096" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:25:29.96Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101098" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T07:01:32.349Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101041" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:55:23.936Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101043" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T11:05:48.221Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101101" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:10:02.37Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101099" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T13:06:18.088Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101106" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:40:44.754Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101127" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T15:10:35.369Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101125" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-05-11T08:24:08.491Z</lastUpdated>
+    <q1:occupied>false</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101124" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-02-28T10:02:33.436Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  <q1:parkingStatusInformation xsi:type="q1:SpaceStatus">
+    <reference xmlns="http://datex2.eu/schema/3/facilities" id="parkingSpace-101126" version="1" targetClass="fac:FacilityObject"/>
+    <lastUpdated xmlns="http://datex2.eu/schema/3/facilities">2026-10-14T14:43:56.463Z</lastUpdated>
+    <q1:occupied>true</q1:occupied>
+  </q1:parkingStatusInformation>
+  </payload>

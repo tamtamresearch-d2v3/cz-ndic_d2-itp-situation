@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<xs:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:fac="http://datex2.eu/schema/3/facilities" version="3.4" targetNamespace="http://datex2.eu/schema/3/facilities" xmlns:com="http://datex2.eu/schema/3/common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://datex2.eu/schema/3/common" schemaLocation="DATEXII_3_Common.xsd" />
+  <xs:complexType name="_FacilityObjectVersionedReference">
+    <xs:complexContent>
+      <xs:extension base="com:VersionedReference">
+        <xs:attribute name="targetClass" type="xs:string" use="required" fixed="fac:FacilityObject" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="_OpeningStatusEnum">
+    <xs:simpleContent>
+      <xs:extension base="fac:OpeningStatusEnum">
+        <xs:attribute name="_extendedValue" type="xs:string" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="FacilityObjectStatus">
+    <xs:sequence>
+      <xs:element name="reference" type="fac:_FacilityObjectVersionedReference" minOccurs="1" maxOccurs="1" />
+      <xs:element name="lastUpdated" type="com:DateTime" minOccurs="0" maxOccurs="1" />
+      <xs:element name="openingStatus" type="fac:_OpeningStatusEnum" minOccurs="0" maxOccurs="1" />
+      <xs:element name="regularOperatingHoursInForce" type="com:Boolean" minOccurs="0" maxOccurs="1" />
+      <xs:element name="statusDescription" type="com:MultilingualString" minOccurs="0" maxOccurs="1" />
+      <xs:element name="_facilityObjectStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FacilityStatus">
+    <xs:complexContent>
+      <xs:extension base="fac:FacilityObjectStatus">
+        <xs:sequence>
+          <xs:element name="_facilityStatusExtension" type="com:_ExtensionType" minOccurs="0" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="OpeningStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="open" />
+      <xs:enumeration value="openWithServiceLimitation" />
+      <xs:enumeration value="closed" />
+      <xs:enumeration value="closedOnHoliday" />
+      <xs:enumeration value="closedOnMaintenance" />
+      <xs:enumeration value="temporarilyClosed" />
+      <xs:enumeration value="statusUnknown" />
+      <xs:enumeration value="other" />
+      <xs:enumeration value="_extended" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
